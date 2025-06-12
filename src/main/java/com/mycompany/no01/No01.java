@@ -1,11 +1,14 @@
-package com.mycompany.no01;
-
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 public class No01 {
     public static void main(String[] args) {
+        if (GraphicsEnvironment.isHeadless()) {
+            System.out.println("Running in headless mode. GUI is not supported.");
+            return;
+        }
+
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Product Table");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,4 +29,4 @@ public class No01 {
             frame.setVisible(true);
         });
     }
-} 
+}
