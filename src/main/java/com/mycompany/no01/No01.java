@@ -2,9 +2,17 @@ package com.mycompany.no01;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 public class No01 {
     public static void main(String[] args) {
+        // Kiểm tra môi trường có hỗ trợ GUI hay không
+        if (GraphicsEnvironment.isHeadless()) {
+            System.out.println("Headless environment detected. GUI will not be launched.");
+            return;
+        }
+
+        // Khởi tạo giao diện
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Product Table");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
