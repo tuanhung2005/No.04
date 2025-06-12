@@ -31,7 +31,6 @@
 
     <build>
         <plugins>
-            <!-- Plugin để đóng gói JAR có Main-Class -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
